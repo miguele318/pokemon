@@ -100,24 +100,34 @@ $pokemones[9] = new pokemon('Meowth', 'Normal','imagenes/meowth.png',70,1);
 $pokemones[10] = new pokemon('Primeape','Lucha','imagenes/primeape.png',90,2);
 $pokemones[11] = new pokemon('Kadabra','Psiquico','imagenes/kadabra.png',90,2);
 $pokemones[12] = new pokemon('Gengar','Fantasma','imagenes/gengar.png',130,3);
+$pokemones[13] = new pokemon('Ivysaur', 'Planta','imagenes/ivysaur.png',100,2);
+$pokemones[14] = new pokemon('Charizard', 'Fuego','imagenes/charizard.png',270,3);
+$pokemones[15] = new pokemon('Blastoise', 'Agua','imagenes/blastoise.png',240,3);
+$pokemones[16] = new pokemon('Butterfree', 'Bicho','imagenes/butterfree.png',130,2);
+$pokemones[17] = new pokemon('Pidgeot','Volador','imagenes/pidgeot.png',170,3);
+$pokemones[18] = new pokemon('Rattata','Normal','imagenes/rattara.png',40,1);
+$pokemones[19] = new pokemon('Raichu', 'Electrico','imagenes/raichu.png',260,3);
+$pokemones[20] = new pokemon('Diglett', 'Tierra','imagenes/diglett.png',50,1);
+$pokemones[21] = new pokemon('Clefable', 'Hada','imagenes/clefable.png',110,3);
+$pokemones[22] = new pokemon('Nidoran', 'Veneno','imagenes/nidoran.png',60,1);
+$pokemones[23] = new pokemon('Machoke','Lucha','imagenes/machoke.png',100,2);
+$pokemones[24] = new pokemon('Hypno','Psiquico','imagenes/hypno.png',110,2);
+$pokemones[25] = new pokemon('Gastly','Fantasma','imagenes/gastly.png',40,1);
+$pokemones[26] = new pokemon('Ekans','Veneno','imagenes/ekans.png',70,1);
 
-function pokemon_tipo($pokemones,$tipo){
-    $p=array();
-
-}
 function mostrarPokemonesporTipo($pokemones,$tipo){
     
         foreach($pokemones as $row){
             if($row->getTipo() ==$tipo){
-                echo '<a href="'.$row->getImg().'>
-                    <div class="m_pokemon">
-                    <img  class="img_p" src="'.$row->getImg().'"/>
-                        <br>    
-                        <h1 class="pokemon">'.$row->getNombre().'</h1>
-                        <h3 class="info_pok"> Tipo: '.$row->getTipo().'</h3>
-                        <h3 class="info_pok"> Fuerza: '.$row->getFuerza().'</h3>
-                        <h3 class="info_pok"> Evolucion: '.$row->getEvolucion().'</h3>
-                    </div> </a>';
+                echo '<a href="'.$row->getImg().'">
+                <div class="m_pokemon">
+                <img  class="img_p" src="'.$row->getImg().'"/>
+                    <br>
+                    <h1 class="pokemon">'.$row->getNombre().'</h1>
+                    <h3 class="info_pok"> Tipo: '.$row->getTipo().'</h3>
+                    <h3 class="info_pok"> Fuerza: '.$row->getFuerza().'</h3>
+                    <h3 class="info_pok"> Evolucion: '.$row->getEvolucion().'</h3>
+                </div> </a>';
                 
             }
         }
@@ -177,7 +187,7 @@ function mostrarPokemonesTipoFuerza($pokemones,$fuerza,$tipo){
         <img class ="imag_cab"src="imagenes/cab_pokedex.jpg">
     </header>
     <div id= "navg">
-        <div id=m_pok class="info ">info
+        <div id=m_pok class="info ">
             <?php
             if((isset($_GET["fuerza"])) or (isset($_GET["tipo"]))){
 
